@@ -1,0 +1,295 @@
+/* CSS file */
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    max-width: 100%;
+    grid-template-rows: auto 170px 100px;
+    grid-template-areas:
+    "."
+    "navbar"
+    "content"
+    "footer"
+    ;
+}
+navbar {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: 1fr 200px 130px 10px;
+    grid-template-areas: 
+    "left-nav center-nav right-nav ."
+    ;
+    font-size: 13px;
+    font-family: arial,sans-serif;
+    padding-top: 20px;
+    padding-left: 20px;
+    
+}
+
+.left-nav {
+    grid-area: left-nav;
+    color: black;
+    opacity: 0.75;
+    text-decoration: none;
+}
+.center-nav {
+    grid-area: center-nav;
+    display: grid;
+    grid-template-columns: 40px 40px;
+    grid-template-areas: 
+    "gmail images"
+    ;
+    justify-self: end;
+}
+.gmail {
+    grid-area: gmail;
+}
+.images {
+    grid-area: images;
+}
+.right-nav {
+    grid-area: right-nav;
+    grid-template-columns: 40px 40px;
+    grid-template-areas: 
+    "boxnav profile-pic"
+    ;
+    justify-self: end;
+}
+.boxnav {
+    grid-area: boxnav;
+}
+.profile-pic {
+    grid-area: profile-pic;
+}
+content {
+    display: grid;
+    grid-area: content;
+    justify-items: center;
+    align-items: start;
+    grid-template-rows: 1fr 1fr 200px 500px 1fr 1fr;
+    grid-template-areas:
+    "."
+    "google-logo"
+    "google-form"
+    "google-french"
+    "."
+    "."
+    ;
+}
+.google-logo {
+    display: grid;
+    grid-area: google-logo;
+    margin-bottom: 30px;
+}
+.google-form {
+    grid-area: google-form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:  
+    "textbox textbox"
+    "search lucky"
+    ;
+}
+.textbox {
+    grid-area: textbox;
+    display: grid;
+    height: 45px;
+    width: 600px;
+    border: 1px solid;
+    border-radius: 25px;
+    border-color: rgb(218 220 224);
+    border-width: thin;
+}
+.textbox:hover {
+    box-shadow: 0px 1px 6px rgba(32,33,36,.28);
+}
+.search {
+    grid-area: search;
+    display: grid;
+    margin-top: 15px;
+    margin-right: -140px;
+    padding: 
+    line-height: 27px;
+    height: 36px;
+    width: 150px;
+    justify-self: center;
+    align-self: middle;
+    border-radius: 4px;
+    border: none;
+    background-color: #f8f9fa; 
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #3c4043;
+    padding-top: 10px;
+}
+
+.search:hover {
+box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+border: 1px solid #dadce0;
+color: #202124;
+}
+.lucky {
+    grid-area: lucky;
+    display: grid;
+    margin-top: 15px;
+    margin-left: -140px;
+    line-height: 27px;
+    align-self: middle;
+    height: 36px;
+    width: 155px;
+    justify-self: center;
+    border-radius: 4px;
+    border: none;
+    background-color: #f8f9fa; 
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #3c4043;
+    padding-top: 5px;
+}
+.lucky:hover {
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    border: 1px solid #dadce0;
+    color: #202124;
+    }
+
+.google-french {
+    grid-area: google-french;
+    display: grid;
+    align-self: start;
+    margin-top: -70px;
+    font-size: small;
+    color: #202124;
+    font-family: arial,sans-serif;
+}
+footer {
+    display: grid;
+    grid-area: footer;
+    align-self: end;
+    grid-template-rows: 40px 40px;
+    grid-template-areas: 
+    "canada"
+    "footer-rest"
+    ;
+    position: absolute;;
+    bottom: 0;
+    color: rgba(0,0,0,.54);
+    font-family: arial,sans-serif;
+    font-size: 14px;
+}
+
+.canada {
+    grid-area: canada;
+    background-color: #f2f2f2; 
+    font-size: 15px;
+    line-height: 40px;
+    padding-left: 20px;
+    border: 1px solid #dadce0;
+}
+.footer-rest {
+    display: grid;
+    width: 100vw; 
+    grid-area: footer-rest;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "footer-rest-left footer-rest-right"
+    ;
+}
+.footer-rest-left {
+    grid-area: footer-rest-left;
+    background-color:#f2f2f2;
+    display: grid;
+    grid-template-columns: 93px 82px 120px;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom:  1px solid #dadce0;
+    grid-template-areas:  
+    "advertising business how-search"
+    ;
+}
+.advertising {
+    grid-area: advertising;
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+}
+.advertising:hover {
+    text-decoration: underline;  
+ }
+ .advertising:active {
+    text-decoration: underline;  
+    color:#ea4335;
+ }
+.business {
+    grid-area: business;
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+}
+.business:hover {
+    text-decoration: underline;  
+ }
+ .business:active {
+    text-decoration: underline;  
+    color:#ea4335;
+ }
+.how-search {
+    grid-area: how-search;
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+}
+.how-search:hover {
+    text-decoration: underline;  
+ }
+ .how-search:active {
+    text-decoration: underline;  
+    color:#ea4335;
+ }
+.footer-rest-right {
+    grid-area: footer-rest-right;
+    background-color:#f2f2f2;
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    align-items: center;
+    justify-content: end;
+    border-bottom:  1px solid #dadce0;
+    grid-template-areas:  
+    "privacy terms settings"
+    ;
+}
+.privacy {
+    grid-area: privacy;
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+}
+.privacy:hover {
+    text-decoration: underline;  
+ }
+ .privacy:active {
+    text-decoration: underline;  
+    color:#ea4335;
+ }
+.terms {
+    grid-area: terms;
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+}
+.terms:hover {
+    text-decoration: underline;  
+ }
+ .terms:active {
+    text-decoration: underline;  
+    color:#ea4335;
+ }
+.settings {
+    grid-area: settings;
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+}
+.settings:hover {
+    text-decoration: underline;  
+ }
+ .settings:active {
+    text-decoration: underline;  
+    color:#ea4335;
+ }
