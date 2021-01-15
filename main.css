@@ -119,6 +119,11 @@ content {
     left: 433px;
     resize: 10%;
 }
+.mic {
+    position: absolute;
+    right: 435px;
+    bottom: 353px;
+}
 
 .search {
     grid-area: search;
