@@ -106,6 +106,9 @@ content {
 .textbox:hover {
     box-shadow: 0px 1px 6px rgba(32,33,36,.28);
 }
+.textbox:focus {
+    outline:0 !important; 
+}
 .search {
     grid-area: search;
     display: grid;
