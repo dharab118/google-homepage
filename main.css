@@ -30,6 +30,7 @@ navbar {
 
 .left-nav {
     grid-area: left-nav;
+    grid-gap: 5px;
     color: black;
     opacity: 0.75;
     text-decoration: none;
@@ -122,9 +123,9 @@ content {
 .mic {
     grid-area: mic;
     position: absolute;
-    margin-top: 5px;
+    margin-top: 6px;
     justify-self: end;
-    margin-right: 7px;
+    margin-right: 9px;
 
 }
 .mag-glass {
@@ -193,7 +194,14 @@ color: #202124;
     font-size: small;
     color: #202124;
     font-family: arial,sans-serif;
-    
+}
+.french-link {
+    color: #1a0dab;
+    text-decoration: none;
+}
+.french-link:hover {
+    color: #1a0dab;
+    text-decoration: underline;
 }
 footer {
     display: grid;
