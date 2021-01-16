@@ -30,11 +30,24 @@ navbar {
 
 .left-nav {
     grid-area: left-nav;
-    grid-gap: 5px;
+}
+.about {
+    padding-right: 10px;
+    color: black;
+    opacity: 0.75;
+    text-decoration: none;
+} 
+.about:hover {
+    text-decoration: underline;
+}
+.store {
     color: black;
     opacity: 0.75;
     text-decoration: none;
 }
+.store:hover {
+    text-decoration: underline;
+} 
 .center-nav {
     grid-area: center-nav;
     display: grid;
