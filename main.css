@@ -17,7 +17,7 @@
 navbar {
     grid-area: navbar;
     display: grid;
-    grid-template-columns: 1fr 200px 130px 10px;
+    grid-template-columns: 1fr 200px 140px 5px;
     grid-template-areas: 
     "left-nav center-nav right-nav ."
     ;
@@ -33,6 +33,7 @@ navbar {
 }
 .about {
     padding-right: 10px;
+    padding-left: 4px;
     color: black;
     opacity: 0.75;
     text-decoration: none;
@@ -59,9 +60,22 @@ navbar {
 }
 .gmail {
     grid-area: gmail;
+    color: black;
+    opacity: 0.75;
+    text-decoration: none;
+}
+.gmail:hover {
+    text-decoration: underline;
 }
 .images {
     grid-area: images;
+    padding-left: 4px;
+    color: black;
+    opacity: 0.75;
+    text-decoration: none;
+}
+.images:hover {
+    text-decoration: underline;
 }
 .right-nav {
     grid-area: right-nav;
@@ -70,6 +84,7 @@ navbar {
     "boxnav profile-pic"
     ;
     justify-self: end;
+    padding-top: -5px;
 }
 .boxnav {
     grid-area: boxnav;
