@@ -6,9 +6,8 @@
 .container {
     display: grid;
     max-width: 100%;
-    grid-template-rows: auto 190px 100px;
+    grid-template-rows: 200px 400px 100px;
     grid-template-areas:
-    "."
     "navbar"
     "content"
     "footer"
@@ -17,22 +16,23 @@
 navbar {
     grid-area: navbar;
     display: grid;
-    grid-template-columns: 1fr 200px 140px 5px;
+    grid-template-columns: 1fr 200px 140px;
     grid-template-areas: 
-    "left-nav center-nav right-nav ."
+    "left-nav center-nav right-nav"
     ;
     font-size: 13px;
     font-family: arial,sans-serif;
-    padding-top: 20px;
     padding-left: 20px;
     
 }
 
 .left-nav {
     grid-area: left-nav;
+    padding-top: 20px;
 }
 .about {
     padding-right: 10px;
+    padding-top: 20px;
     padding-left: 4px;
     color: black;
     opacity: 0.75;
@@ -45,6 +45,7 @@ navbar {
     color: black;
     opacity: 0.75;
     text-decoration: none;
+    padding-top: 20px;
 }
 .store:hover {
     text-decoration: underline;
@@ -57,11 +58,12 @@ navbar {
     "gmail images"
     ;
     justify-self: end;
+    padding-right: -5px;
 }
 .gmail {
     grid-area: gmail;
-    color: black;
-    opacity: 0.75;
+    padding-top: 20px;
+    color: rgba(0,0,0,0.87);
     text-decoration: none;
 }
 .gmail:hover {
@@ -69,9 +71,9 @@ navbar {
 }
 .images {
     grid-area: images;
-    padding-left: 4px;
-    color: black;
-    opacity: 0.75;
+    padding-left: 14px;
+    padding-top: 20px;
+    color: rgba(0,0,0,0.87);
     text-decoration: none;
 }
 .images:hover {
@@ -79,18 +81,24 @@ navbar {
 }
 .right-nav {
     grid-area: right-nav;
-    grid-template-columns: 40px 40px;
+    grid-template-columns: 60px 40px;
     grid-template-areas: 
     "boxnav profile-pic"
     ;
     justify-self: end;
-    padding-top: -5px;
+    padding-right: 7px;
 }
 .boxnav {
     grid-area: boxnav;
+    position: absolute;
+    padding-top: 17px;
+    padding-right: 50px;
 }
 .profile-pic {
     grid-area: profile-pic;
+    padding-left: 26px;
+    padding-right: 10px;
+    padding-top: 2px;
 }
 content {
     display: grid;
@@ -162,8 +170,6 @@ content {
     margin-left: 14px;
     margin-top: 10px;
 }
-
-
 .search {
     grid-area: search;
     display: grid;
