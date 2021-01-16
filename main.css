@@ -14,7 +14,8 @@
     ;
 }
 navbar {
-    grid-area: navbar;
+    grid-area: navbar; 
+   
     display: grid;
     grid-template-columns: 1fr 200px 140px;
     grid-template-areas: 
@@ -246,7 +247,7 @@ footer {
     "canada"
     "footer-rest"
     ;
-    position: absolute;;
+    position: fixed; 
     bottom: 0;
     color: rgba(0,0,0,.54);
     font-family: arial,sans-serif;
