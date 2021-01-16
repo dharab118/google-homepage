@@ -6,7 +6,7 @@
 .container {
     display: grid;
     max-width: 100%;
-    grid-template-rows: auto 170px 100px;
+    grid-template-rows: auto 190px 100px;
     grid-template-areas:
     "."
     "navbar"
@@ -89,17 +89,23 @@ content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:  
-    "textbox textbox"
+    "search-bar search-bar"
     "search lucky"
     ;
 }
 
-.textbox {
-    grid-area: textbox;
-    text-indent: 47px;
+.search-bar {
+    grid-area: search-bar;
     display: grid;
+    position: relative;
+    grid-template-columns: 10px 545px 23px;
+    grid-template-areas: 
+    "mag-glass textbox mic"
+}
+.textbox {
+    text-indent: 47px;
     height: 45px;
-    width: 600px;
+    width: 580px;
     border: 1px solid;
     border-radius: 25px;
     border-color: rgb(218 220 224);
@@ -113,27 +119,31 @@ content {
 .textbox:focus {
     outline:0 !important;
 }
-.mag-glass {
-    position: absolute;
-    bottom: 355px;
-    left: 433px;
-    resize: 10%;
-}
 .mic {
+    grid-area: mic;
     position: absolute;
-    right: 435px;
-    bottom: 353px;
+    margin-top: 5px;
+    justify-self: end;
+    margin-right: 7px;
+
 }
+.mag-glass {
+    grid-area: mag-glass;
+    position: absolute;
+    margin-left: 14px;
+    margin-top: 10px;
+}
+
 
 .search {
     grid-area: search;
     display: grid;
     margin-top: 15px;
-    margin-right: -140px;
+    margin-right: -137px;
     padding: 
     line-height: 27px;
     height: 36px;
-    width: 150px;
+    width: 135px;
     justify-self: center;
     align-self: middle;
     border-radius: 4px;
@@ -154,11 +164,11 @@ color: #202124;
     grid-area: lucky;
     display: grid;
     margin-top: 15px;
-    margin-left: -140px;
+    margin-left: -137px;
     line-height: 27px;
     align-self: middle;
     height: 36px;
-    width: 155px;
+    width: 140px;
     justify-self: center;
     border-radius: 4px;
     border: none;
@@ -177,11 +187,13 @@ color: #202124;
 .google-french {
     grid-area: google-french;
     display: grid;
+    display: inline-block;
     align-self: start;
     margin-top: -70px;
     font-size: small;
     color: #202124;
     font-family: arial,sans-serif;
+    
 }
 footer {
     display: grid;
